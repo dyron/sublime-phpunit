@@ -558,7 +558,7 @@ class ActiveView(ActiveFile):
     def find_tested_file(self):
         Msgs.debug_msg("Looking for tested file")
         fq_classname = self.determine_full_class_name()
-        if fq_classname is None:
+        if not fq_classname or fq_classname is None:
             return None
         if fq_classname[-4:] == 'Test':
             fq_classname = fq_classname[:-4]
