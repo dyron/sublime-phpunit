@@ -585,10 +585,10 @@ class ActiveView(ActiveFile):
     def find_test_file(self):
         Msgs.debug_msg("Looking for test file")
         classname = self.determine_full_class_name()
-        Msgs.debug_msg("classname is: " + classname)
         if classname is None:
             return None
 
+        Msgs.debug_msg("classname is: " + classname)
         classname = classname + 'Test'
         filename = classname + '.php'
 
